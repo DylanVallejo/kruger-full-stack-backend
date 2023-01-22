@@ -24,8 +24,8 @@ public class Comment implements Serializable{
 	    @Column(name = "text", nullable = false,length = 250)
 	    private String text;
 
-	    @ManyToOne(fetch = FetchType.EAGER)
+	    /*@ManyToOne(fetch = FetchType.EAGER)
 	    @JoinColumn(name = "product_id")
-	    private Product product;
+	    private Product product; */
 
 }

@@ -3,7 +3,6 @@ package kruger.products.models.entity;
 import java.io.Serializable;
 import java.sql.Date;
 import java.util.List;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -15,16 +14,14 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
-
+/*import javax.persistence.Temporal;
+import javax.persistence.TemporalType;*/
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 
-	
 	
 	
 @Entity
@@ -65,18 +62,17 @@ public class Product implements Serializable{
     
     private Long stock;
     
-
+/*
     @Temporal(TemporalType.DATE)
     @Column(name = "create_at")
     private Date createAt;
-
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id")
     private Category category;
   
    
     @OneToMany(mappedBy = "products", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private List<Comment> comments;
+    private List<Comment> comments; */
 
 }
    
