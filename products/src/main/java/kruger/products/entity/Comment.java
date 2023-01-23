@@ -1,15 +1,18 @@
-package kruger.products.models.entity;
+package kruger.products.entity;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
-import javax.persistence.Column;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
 
+@Entity
+@Table(name = "comment")
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class Comment implements Serializable{
 	
 	
@@ -24,8 +27,7 @@ public class Comment implements Serializable{
 	    @Column(name = "text", nullable = false,length = 250)
 	    private String text;
 
-	    /*@ManyToOne(fetch = FetchType.EAGER)
-	    @JoinColumn(name = "product_id")
-	    private Product product; */
-
+	@ManyToOne(fetch = FetchType.EAGER)
+	@JoinColumn(name = "product_id")
+	private Product product;
 }

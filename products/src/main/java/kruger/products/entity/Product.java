@@ -1,4 +1,4 @@
-package kruger.products.models.entity;
+package kruger.products.entity;
 
 import java.io.Serializable;
 import java.sql.Date;
@@ -16,14 +16,17 @@ import javax.persistence.OneToMany;
 import javax.persistence.Table;
 /*import javax.persistence.Temporal;
 import javax.persistence.TemporalType;*/
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
+import org.springframework.validation.annotation.Validated;
 
-	
-	
+
 @Entity
 @Table(name = "products")
 @Data
@@ -66,14 +69,17 @@ public class Product implements Serializable{
     @Temporal(TemporalType.DATE)
     @Column(name = "create_at")
     private Date createAt;
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "category_id")
-    private Category category;
+
   
-   
-    @OneToMany(mappedBy = "products", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
-    private List<Comment> comments; */
+   */
+@JsonIgnore
+@ManyToOne(fetch = FetchType.LAZY)
+@JoinColumn(name = "category_id")
+private Category category;
+
+    @JsonIgnore
+    @OneToMany(mappedBy = "product", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    private List<Comment> comments;
 
 }
    
-

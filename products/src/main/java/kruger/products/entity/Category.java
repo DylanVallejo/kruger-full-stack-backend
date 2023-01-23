@@ -1,4 +1,4 @@
-package kruger.products.models.entity;
+package kruger.products.entity;
 import java.io.Serializable;
 /*import java.sql.Date;*/
 import java.util.Set;
@@ -16,6 +16,7 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;*/
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -43,9 +44,9 @@ public class Category implements Serializable {
     /*  @Temporal(TemporalType.DATE)
     @Column(name = "create_at")
     private Date createAt;
-   
 
+    *///
+    @JsonIgnore
     @OneToMany(mappedBy = "category", fetch = FetchType.LAZY, cascade = CascadeType.MERGE)
     private Set<Product> products;
-    *///
 }
