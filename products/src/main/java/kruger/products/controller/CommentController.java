@@ -13,7 +13,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/review")
+@RequestMapping("/comment")
 public class CommentController {
 
     @Autowired

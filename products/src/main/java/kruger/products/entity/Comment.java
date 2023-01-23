@@ -11,8 +11,8 @@ import javax.persistence.*;
 @Entity
 @Table(name = "comment")
 @Data
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 public class Comment implements Serializable{
 	
 	

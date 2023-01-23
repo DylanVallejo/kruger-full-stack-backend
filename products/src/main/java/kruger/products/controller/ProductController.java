@@ -41,7 +41,6 @@ public class ProductController {
     public ResponseEntity<Product> save(@RequestBody Product product){
 
         Optional<Category> category= categoryService.findCategoryByid(product.getCategory().getId());
-
         product.setCategory(category.get());
         Product productNew = productService.save(product);
         return ResponseEntity.ok(productNew);

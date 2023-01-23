@@ -30,8 +30,8 @@ import org.springframework.validation.annotation.Validated;
 @Entity
 @Table(name = "products")
 @Data
-@AllArgsConstructor @NoArgsConstructor
-@Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Product implements Serializable{
 
     /**
@@ -53,9 +53,9 @@ public class Product implements Serializable{
     
 //  private String category;
     
-    private Long heigth;
+    private double heigth;
     
-    private Long weigth; 
+    private double weigth;
     
     private Long bestSelling; 
     
@@ -72,10 +72,11 @@ public class Product implements Serializable{
 
   
    */
-@JsonIgnore
-@ManyToOne(fetch = FetchType.LAZY)
-@JoinColumn(name = "category_id")
-private Category category;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "category_id")
+    @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
+    private Category category;
 
     @JsonIgnore
     @OneToMany(mappedBy = "product", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
