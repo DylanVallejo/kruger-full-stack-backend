@@ -13,12 +13,12 @@ import javax.persistence.Id;
 public class Role {
 
 	@Id	
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+//	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Basic(optional = false)
-    @Column(name = "id",unique=true, nullable = false)
-	private Long id;
+    @Column(unique=true, nullable = false)
+//	private Long id;
 	
-	@Column
+//	@Column
 	private String roleName;
 	
 	@Column
@@ -26,11 +26,11 @@ public class Role {
 
 	@Override
 	public String toString() {
-		return "Role [id=" + id + ", roleName=" + roleName + ", roleDescription=" + roleDescription + "]";
+		return "Role [ roleName=" + roleName + ", roleDescription=" + roleDescription + "]";
 	}
 
-	public Role(Long id, String roleName, String roleDescription) {
-		this.id = id;
+	public Role( String roleName, String roleDescription) {
+		
 		this.roleName = roleName;
 		this.roleDescription = roleDescription;
 	}
@@ -41,13 +41,7 @@ public class Role {
 		// TODO Auto-generated constructor stub
 	}
 
-	public Long getId() {
-		return id;
-	}
 
-	public void setId(Long id) {
-		this.id = id;
-	}
 
 	public String getRoleName() {
 		return roleName;
