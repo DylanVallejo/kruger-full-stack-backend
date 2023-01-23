@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -54,6 +55,7 @@ public class CommentController {
         Comment comment1 = commetService.findReviewByid(id).get();
         comment1.setText(comment1.getText());
         comment1.setProduct(product.get());
+        comment1.setLastModifiedDate(new Date());
         Comment reviewNew = commetService.save(comment1);
         return ResponseEntity.ok(reviewNew);
     }

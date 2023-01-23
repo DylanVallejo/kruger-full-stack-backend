@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -55,6 +56,7 @@ public class ProductController {
         product1.setPrice(product.getPrice());
         product1.setStock(product.getStock());
         product1.setItsInOffers(product.getItsInOffers());
+        product1.setLastModifiedDate(new Date());
         Product productNew = productService.save(product1);
         return ResponseEntity.ok(productNew);
     }
