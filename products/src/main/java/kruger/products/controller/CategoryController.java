@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/category")
+@RequestMapping("api/category")
 public class CategoryController {
 
 
@@ -25,7 +25,7 @@ public class CategoryController {
         return ResponseEntity.ok(categorys);
     }
 
-    @GetMapping("/{id}")
+    @GetMapping("api/{id}")
     public ResponseEntity<Optional<Category>> getById(@PathVariable("id") Long id){
         Optional<Category> category = categoryService.findCategoryByid(id);
         if(category==null)
