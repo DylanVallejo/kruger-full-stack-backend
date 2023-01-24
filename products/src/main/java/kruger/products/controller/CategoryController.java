@@ -32,7 +32,15 @@ public class CategoryController {
             return ResponseEntity.notFound().build();
         return ResponseEntity.ok(category);
     }
-
+    
+    //Busqueda  por  nombre de categoria
+    @GetMapping("/nombre/{name}")
+    public ResponseEntity<List<Category>> getById(@PathVariable("name") String name){
+        List<Category> category = categoryService.findByName(name);
+        if(category==null)
+            return ResponseEntity.notFound().build();
+        return ResponseEntity.ok(category);
+    }
 
     @PostMapping()
     public ResponseEntity<Category> save(@RequestBody Category category){

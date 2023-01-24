@@ -7,7 +7,7 @@ import java.util.Optional;
 public class AuditorAwareImpl implements AuditorAware<String> {
     @Override
     public Optional<String> getCurrentAuditor() {
-        return Optional.of("Edwin");
+        return Optional.of("Dylancito");
         // Use below commented code when will use Spring Security.
     }
 
