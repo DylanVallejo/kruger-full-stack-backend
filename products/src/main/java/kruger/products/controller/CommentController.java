@@ -53,7 +53,7 @@ public class CommentController {
 
         Optional<Product> product = productService.findProductoByid(comment.getProduct().getId());
         Comment comment1 = commetService.findReviewByid(id).get();
-        comment1.setText(comment1.getText());
+        comment1.setText(comment.getText());
         comment1.setProduct(product.get());
         comment1.setLastModifiedDate(new Date());
         Comment reviewNew = commetService.save(comment1);

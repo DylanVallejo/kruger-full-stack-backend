@@ -1,11 +1,14 @@
 package kruger.products.controller;
 
 import kruger.products.entity.Category;
+import kruger.products.entity.Comment;
+import kruger.products.entity.Product;
 import kruger.products.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -48,5 +51,18 @@ public class CategoryController {
         Category categoryNew = categoryService.save(category);
         return ResponseEntity.ok(categoryNew);
     }
+
+    @PutMapping("/update/{id}")
+    public ResponseEntity<Category> update(@RequestBody Category category, @PathVariable("id") Long id ){
+
+        Category category1 = categoryService.findCategoryByid(id).get();
+
+        category1.setName(category.getName());
+        category1.setDescription(category.getDescription());
+        category1.setLastModifiedDate(new Date());
+        Category categoryNew = categoryService.save(category1);
+        return ResponseEntity.ok(categoryNew);
+    }
+
 }
 
