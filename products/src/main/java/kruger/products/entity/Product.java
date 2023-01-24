@@ -1,22 +1,17 @@
 package kruger.products.entity;
 
 import java.io.Serializable;
-import java.sql.Date;
 import java.util.List;
 import javax.persistence.*;
-/*import javax.persistence.Temporal;
-import javax.persistence.TemporalType;*/
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.sun.istack.NotNull;
 import kruger.products.Audit.Auditable;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
-import org.springframework.validation.annotation.Validated;
+
 
 
 @Entity
@@ -46,9 +41,9 @@ public class Product extends Auditable<String> implements Serializable{
     
 //  private String category;
     
-    private double heigth;
+    private double height;
     
-    private double weigth;
+    private double width;
     
     private Long bestSelling; 
     
