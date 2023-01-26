@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: gateway-microservice
+  cloud:
+    config:
+      uri: http://localhost:8080
