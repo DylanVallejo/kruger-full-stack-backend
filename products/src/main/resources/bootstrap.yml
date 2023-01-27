@@ -1,6 +1,6 @@
 spring:
   application:
-    name:product-microservice
+    name: products
   cloud:
     config:
       enabled: true
