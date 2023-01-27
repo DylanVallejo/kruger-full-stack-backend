@@ -1,5 +1,6 @@
 package kruger.products.entity;
 
+import jakarta.persistence.*;
 import kruger.products.Audit.Auditable;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,8 +8,6 @@ import lombok.NoArgsConstructor;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import java.io.Serializable;
-
-import javax.persistence.*;
 
 @Entity
 @Table(name = "comment")

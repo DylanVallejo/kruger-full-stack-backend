@@ -1,15 +1,12 @@
 package kruger.products.entity;
 import java.io.Serializable;
-/*import java.sql.Date;*/
+
 import java.util.Set;
 
-import javax.persistence.*;
-/*import javax.persistence.Column;*/
-/*
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;*/
+
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
 import kruger.products.Audit.Auditable;
 import lombok.AllArgsConstructor;
 import lombok.Data;
