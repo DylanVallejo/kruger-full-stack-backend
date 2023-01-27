@@ -52,14 +52,8 @@ public class Product extends Auditable<String> implements Serializable{
     private  Long discount;
     
     private Long stock;
-    
-/*
-    @Temporal(TemporalType.DATE)
-    @Column(name = "create_at")
-    private Date createAt;
 
-  
-   */
+    private String crosselling;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id")
