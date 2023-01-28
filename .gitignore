@@ -15,3 +15,28 @@ gateway-microservice/mvnw
 gateway-microservice/mvnw.cmd
 gateway-microservice/.mvn/wrapper/maven-wrapper.jar
 gateway-microservice/.mvn/wrapper/maven-wrapper.properties
+
+
+consumer-microservice/HELP.md
+consumer-microservice/target/
+consumer-microservice/mvnw
+consumer-microservice/mvnw.cmd
+consumer-microservice/.mvn/
+### IntelliJ IDEA ###
+consumer-microservice/.idea
+consumer-microservice/*.iws
+consumer-microservice/*.iml
+consumer-microservice/*.ipr
+
+### STS ###
+consumer-microservice/.apt_generated
+consumer-microservice/.classpath
+consumer-microservice/.factorypath
+consumer-microservice/.project
+consumer-microservice/.settings
+consumer-microservice/.springBeans
+consumer-microservice/.sts4-cache
+
+
+
+
