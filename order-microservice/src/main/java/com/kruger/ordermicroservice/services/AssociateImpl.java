@@ -24,6 +24,7 @@ public class AssociateImpl implements AssociateService{
 
     @Override
     public Associate save(Associate associate) {
+        associate.setAssociateStatus(true);
         return repo.save(associate);
     }
 
