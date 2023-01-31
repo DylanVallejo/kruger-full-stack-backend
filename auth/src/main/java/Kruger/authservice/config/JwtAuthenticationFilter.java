@@ -33,6 +33,16 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     final String authHeader = request.getHeader("Authorization");
     final String jwt;
     final String userEmail;
+//añadiendoe cors? espero funcione :v
+//    HttpServletRequest request1 = (HttpServletRequest) request;
+//    HttpServletResponse response1 = (HttpServletResponse) response;
+//
+//    response1.setHeader("Access-Control-Allow-Origin", request1.getHeader("Origin"));
+//    response1.setHeader("Access-Control-Allow-Credentials", "true");
+//    response1.setHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE");
+//    response1.setHeader("Access-Control-Max-Age", "3600");
+//    response1.setHeader("Access-Control-Allow-Headers", "Content-Type, Accept, X-Requested-With, remember-me");
+
     if (authHeader == null ||!authHeader.startsWith("Bearer ")) {
       filterChain.doFilter(request, response);
       return;

@@ -5,6 +5,7 @@ import kruger.products.entity.Comment;
 import kruger.products.entity.Product;
 import kruger.products.service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,6 +15,8 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("api/category")
+@CrossOrigin(origins = "*", allowedHeaders = "*", methods= {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})
+//@CrossOrigin(origins = "*", maxAge = 3600)
 public class CategoryController {
 
 
@@ -37,6 +40,7 @@ public class CategoryController {
     }
     
     //Busqueda  por  nombre de categoria
+
     @GetMapping("/nombre/{name}")
     public ResponseEntity<List<Category>> getById(@PathVariable("name") String name){
         List<Category> category = categoryService.findByName(name);
@@ -44,8 +48,9 @@ public class CategoryController {
             return ResponseEntity.notFound().build();
         return ResponseEntity.ok(category);
     }
-
+//    @CrossOrigin(origins = "http://localhost:8082", allowedHeaders = "Requestor-Type", exposedHeaders = "X-Get-Header")
     @PostMapping()
+    @ConfigurationProperties(prefix = "web")
     public ResponseEntity<Category> save(@RequestBody Category category){
 
         Category categoryNew = categoryService.save(category);

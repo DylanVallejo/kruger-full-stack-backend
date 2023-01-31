@@ -11,9 +11,12 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Date;
 import java.util.List;
 import java.util.Optional;
+//@CrossOrigin(origins = "http://localhost:8082")
 
 @RestController
 @RequestMapping("api/product")
+@CrossOrigin(origins = "*", allowedHeaders = "*", methods= {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})
+//@CrossOrigin(origins = "*")
 public class ProductController {
 
     @Autowired

@@ -37,11 +37,15 @@ public class Product extends Auditable<String> implements Serializable{
     private String productName;
 
     private String description;
+
+    @Column
+    @Lob
+    private  String image;
     
     private Long price;
-    
+
 //  private String category;
-    
+
     private double height;
     
     private double width;
@@ -54,13 +58,6 @@ public class Product extends Auditable<String> implements Serializable{
     
     private Long stock;
     
-/*
-    @Temporal(TemporalType.DATE)
-    @Column(name = "create_at")
-    private Date createAt;
-
-  
-   */
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_id")

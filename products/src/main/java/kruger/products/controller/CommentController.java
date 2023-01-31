@@ -14,7 +14,9 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*", methods= {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})
 @RequestMapping("api/comment")
+//@CrossOrigin(origins = "*", maxAge = 3600)
 public class CommentController {
 
     @Autowired
