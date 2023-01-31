@@ -16,7 +16,6 @@
       <change afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/services/AssociateService.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/services/InvoiceImpl.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/services/InvoiceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/services/OrderImpl.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/services/OrderService.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/services/OrderStateImpl.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/services/OrderStateService.java" afterDir="false" />
@@ -24,11 +23,11 @@
       <change beforePath="$PROJECT_DIR$/../config-data/gateway-microservice.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../config-data/gateway-microservice.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/entities/Associate.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/entities/Associate.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/entities/Invoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/entities/Invoice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/entities/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/entities/Order.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/entities/OrderState.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/entities/OrderState.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/services/AssociateImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/services/AssociateImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/services/OrderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/services/OrderImpl.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

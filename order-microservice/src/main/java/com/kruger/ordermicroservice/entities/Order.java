@@ -23,7 +23,7 @@ public class Order {
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "order_states_id")
     @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-    private OrderState state;
+    private OrderState orderState;
 
 
     @ManyToOne(cascade = CascadeType.ALL)
