@@ -5,6 +5,7 @@ import com.kruger.ordermicroservice.entities.Order;
 import com.kruger.ordermicroservice.services.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,7 +17,7 @@ public class OrderController {
     @Autowired
     private OrderService service;
 
-    @GetMapping("/")
+    @GetMapping
     public List<Order> getAll(){
         return service.getAll();
     }
@@ -25,6 +26,17 @@ public class OrderController {
     @ResponseStatus(HttpStatus.CREATED)
     public Order save(@RequestBody Order order){
         return service.save(order);
+    }
+
+
+//    crear una orden
+    @GetMapping(value = "/{id}")
+    public ResponseEntity<Order> getOrder(@PathVariable("id") long id) {
+        Order Order  = service.getOrder(id);
+        if (null == Order) {
+            return  ResponseEntity.notFound().build();
+        }
+        return  ResponseEntity.ok(Order);
     }
 
 }

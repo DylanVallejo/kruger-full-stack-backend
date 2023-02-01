@@ -41,13 +41,10 @@ public class Product extends Auditable<String> implements Serializable{
     @Column
     @Lob
     private  String image;
-    
     private Long price;
 
-//  private String category;
-
     private double height;
-    
+
     private double width;
     
     private Long bestSelling; 

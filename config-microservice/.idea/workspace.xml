@@ -5,29 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8916b79-b9c8-4546-8257-6f722022e238" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../config-data/order-microservice.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/controllers/AssociateController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/controllers/OrderStateController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/entities/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/repositories/AssociateRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/repositories/InvoiceRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/repositories/OrderRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/repositories/OrderStateRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/services/AssociateService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/services/InvoiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/services/InvoiceService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/services/OrderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/services/OrderStateImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/services/OrderStateService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../order-microservice/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../config-data/gateway-microservice.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../config-data/gateway-microservice.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/client/ProductClient.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/models/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/models/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../auth/src/main/java/Kruger/authservice/controller/AuthenticationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../auth/src/main/java/Kruger/authservice/controller/AuthenticationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/bootstrap.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/entities/Invoice.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/entities/Invoice.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order-microservice/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../order-microservice/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/controllers/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/controllers/OrderController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/entities/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/entities/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/entities/OrderState.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/entities/OrderState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/services/AssociateImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/services/AssociateImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/services/OrderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/services/OrderImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/services/OrderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/services/OrderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../products/src/main/java/kruger/products/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../products/src/main/java/kruger/products/entity/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../products/target/classes/kruger/products/entity/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/../products/target/classes/kruger/products/entity/Product.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +38,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/dylan/Escritorio/edwin c order/orders-microservice"
+    "last_opened_file_path": "C:/Users/dylan/Escritorio/edwin bugs/kruger-full-stack-backend/eureka-microservice"
   }
 }]]></component>
   <component name="RunManager">

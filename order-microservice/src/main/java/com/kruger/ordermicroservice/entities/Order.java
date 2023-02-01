@@ -5,6 +5,7 @@ import jakarta.persistence.*;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 import java.util.Date;
+import java.util.List;
 
 
 @Entity
@@ -32,20 +33,25 @@ public class Order {
     private Associate associate;
 
 
-//    @NotNull(message = "Shipping is mandatory")
-//    @NotEmpty(message = "Shipping shouldn't be empty")
     private int shipping;
 
-//    @Min(value = 0, message = "Shouldn be greater than 0")
+
     private int cost;
 
     //Cart info. Debería incluir el valor del carrito
     // El carrito está compuesto por el product item y el numero de unidades
 
-
     // Shipping. Sugiero que sea una tarifa plana, para no complicarnos.
 
+    @JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
+    @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @JoinColumn(name = "order_id")
+    private List<OrderProduct> items;
 
+
+
+    @Column(name = "total_amount")
+    private Double totalAmount;
 
 
 }
