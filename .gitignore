@@ -22,7 +22,7 @@ order-microservice/mvnw
 order-microservice/mvnw.cmd
 order-microservice/.mvn/
 
-
+config-microservice/.idea/
 
 
 order-microservice/.apt_generated
@@ -37,3 +37,43 @@ order-microservice/.idea
 order-microservice/*.iws
 order-microservice/*.iml
 order-microservice/*.ipr
+
+consumer-microservice/HELP.md
+consumer-microservice/target/
+consumer-microservice/mvnw
+consumer-microservice/mvnw.cmd
+consumer-microservice/.mvn/
+### IntelliJ IDEA ###
+consumer-microservice/.idea
+consumer-microservice/*.iws
+consumer-microservice/*.iml
+consumer-microservice/*.ipr
+
+### STS ###
+consumer-microservice/.apt_generated
+consumer-microservice/.classpath
+consumer-microservice/.factorypath
+consumer-microservice/.project
+consumer-microservice/.settings
+consumer-microservice/.springBeans
+consumer-microservice/.sts4-cache
+
+payment-microservice/HELP.md
+payment-microservice/target/
+payment-microservice/mvnw
+payment-microservice/mvnw.cmd
+payment-microservice/.mvn/
+### IntelliJ IDEA ###
+payment-microservice/.idea
+payment-microservice/*.iws
+payment-microservice/*.iml
+payment-microservice/*.ipr
+
+### STS ###
+payment-microservice/.apt_generated
+payment-microservice/.classpath
+payment-microservice/.factorypath
+payment-microservice/.project
+payment-microservice/.settings
+payment-microservice/.springBeans
+payment-microservice/.sts4-cache

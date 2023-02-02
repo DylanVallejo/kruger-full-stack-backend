@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: payment-microservice
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:8080
