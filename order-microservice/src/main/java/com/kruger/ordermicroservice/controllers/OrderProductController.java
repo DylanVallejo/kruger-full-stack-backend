@@ -39,10 +39,16 @@ public class OrderProductController {
     public OrderProduct save(@PathVariable( "id") Long id, @RequestBody OrderProduct orderProduct){
         Order order = orderService.findById(id).get();
         orderProduct.setOrder(order);
-       // order.getItems().add(detalle);
-//        order.setItems(detalle);
         return orderProductService.save(orderProduct);
     }
+
+    @RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE, produces = "application/json")
+    public void delete(@PathVariable Long id) {
+        orderProductService.delete(id);
+    }
+
+
+
 
 //    @DeleteMapping("/order/detalles\"{id}")
 //    public ResponseEntity<?> delete(@PathVariable Long id){
