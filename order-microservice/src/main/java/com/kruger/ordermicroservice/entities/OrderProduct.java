@@ -19,15 +19,17 @@ public class OrderProduct {
     @ManyToOne
     @JsonIgnore
     private Order order;
-    @Transient
-    Product product;
+    //@Transient
+   // Product product;
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private String productName;
     private Boolean status;
     private Long productId;
     private Double price;
     private Long quantity;
+    private Double subtotal;
 
 }

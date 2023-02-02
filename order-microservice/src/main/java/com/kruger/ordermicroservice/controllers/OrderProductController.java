@@ -6,6 +6,8 @@ import com.kruger.ordermicroservice.entities.OrderProduct;
 import com.kruger.ordermicroservice.entities.OrderState;
 import com.kruger.ordermicroservice.repositories.OrderProductRepository;
 import com.kruger.ordermicroservice.repositories.OrderRepository;
+import com.kruger.ordermicroservice.services.OrderProductServiceImpl;
+import com.kruger.ordermicroservice.services.OrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,30 +17,31 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping("/api")
+@RequestMapping("/api/orderproduct")
 @CrossOrigin(origins = "*", allowedHeaders = "*", methods= {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})
 public class OrderProductController {
 
     @Autowired
-    private OrderRepository orderRepository;
+    private OrderService orderService;
 
     @Autowired
-    private OrderProductRepository orderProductRepository;
+    private OrderProductServiceImpl orderProductService;
 
     @GetMapping("/order/detalles")
     public List<OrderProduct> getAll(){
-        return orderProductRepository.findAll();
+        return orderProductService.getAll();
     }
 
 
 //    agregar un producto a una order
-    @PostMapping("/order/{id}/detalle")
+    @PostMapping("/orderproduct/{id}")
     @ResponseStatus(HttpStatus.CREATED)
-    public OrderProduct save(@PathVariable( "id") Long id, @RequestBody OrderProduct detalle){
-        Order order = orderRepository.findById(id).get();
-        order.getItems().add(detalle);
+    public OrderProduct save(@PathVariable( "id") Long id, @RequestBody OrderProduct orderProduct){
+        Order order = orderService.findById(id).get();
+        orderProduct.setOrder(order);
+       // order.getItems().add(detalle);
 //        order.setItems(detalle);
-        return orderProductRepository.save(detalle);
+        return orderProductService.save(orderProduct);
     }
 
 //    @DeleteMapping("/order/detalles\"{id}")

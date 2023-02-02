@@ -30,6 +30,7 @@ public class OrderController {
 
 
 //    crear una orden
+/*
     @GetMapping(value = "/{id}")
     public ResponseEntity<Order> getOrder(@PathVariable("id") long id) {
         Order Order  = service.getOrder(id);
@@ -38,5 +39,6 @@ public class OrderController {
         }
         return  ResponseEntity.ok(Order);
     }
+*/
 
 }

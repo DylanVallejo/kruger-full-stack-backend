@@ -19,12 +19,12 @@ public class Product {
     private String productName;
     private String description;
     private  String image;
-    private Long price;
+    private Double price;
     private double height;
     private double width;
     private Long bestSelling;
     private  Boolean itsInOffers;
-    private  Long discount;
+    private  Double discount;
     private Long stock;
     private Category category;
 

@@ -1,27 +1,22 @@
 package com.kruger.ordermicroservice.services;
 
-import com.kruger.ordermicroservice.client.ProductClient;
 import com.kruger.ordermicroservice.entities.Associate;
 import com.kruger.ordermicroservice.entities.Order;
-import com.kruger.ordermicroservice.entities.OrderProduct;
 import com.kruger.ordermicroservice.entities.OrderState;
-import com.kruger.ordermicroservice.models.Product;
 import com.kruger.ordermicroservice.repositories.AssociateRepository;
 import com.kruger.ordermicroservice.repositories.OrderRepository;
 import com.kruger.ordermicroservice.repositories.OrderStateRepository;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Collectors;
 
 @Service
 public class OrderImpl  implements  OrderService{
 
 //    necesitmaos autowired pero con autowired no levanta requiere un bean
-    ProductClient productClient;
+   // ProductClient productClient;
 
     @Autowired
     private OrderRepository orderRepository;
@@ -59,6 +54,7 @@ public class OrderImpl  implements  OrderService{
 
 
 //agreagar un producto a la orden item
+    /*
     @Override
     public Order getOrder(Long id){
         Order orderDB = orderRepository.findById(id).orElse(null);
@@ -72,5 +68,5 @@ public class OrderImpl  implements  OrderService{
         }
         return orderDB;
     }
-
+*/
 }
