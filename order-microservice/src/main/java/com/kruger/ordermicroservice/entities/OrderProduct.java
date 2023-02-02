@@ -1,6 +1,7 @@
 package com.kruger.ordermicroservice.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.kruger.ordermicroservice.models.Product;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -14,7 +15,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class OrderProduct {
 
-
+//realacion varios  detalles tienen una orden
+    @ManyToOne
+    @JsonIgnore
+    private Order order;
     @Transient
     Product product;
 

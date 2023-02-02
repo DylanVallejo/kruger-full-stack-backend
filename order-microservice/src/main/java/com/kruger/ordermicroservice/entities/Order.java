@@ -42,16 +42,17 @@ public class Order {
     // El carrito está compuesto por el product item y el numero de unidades
 
     // Shipping. Sugiero que sea una tarifa plana, para no complicarnos.
-
+    //una orden tienen muchos detalles
     @JsonIgnoreProperties({ "hibernateLazyInitializer", "handler" })
     @OneToMany(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "order_id")
     private List<OrderProduct> items;
 
-
-
     @Column(name = "total_amount")
     private Double totalAmount;
 
+//maestro detalle
 
+    //primero orden cabecera
+    //order product detalles
 }
