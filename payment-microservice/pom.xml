@@ -59,6 +59,12 @@
 			<artifactId>spring-cloud-starter-bootstrap</artifactId>
 		</dependency>
 
+		<!--agregando feign client para ordenes -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+		</dependency>
+
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
@@ -98,5 +104,4 @@
 			</snapshots>
 		</repository>
 	</repositories>
-
 </project>

@@ -1,9 +1,13 @@
 package com.kruger.ordermicroservice.entities;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.kruger.ordermicroservice.audit.Auditable;
 import jakarta.persistence.*;
 import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+import java.io.Serializable;
 import java.util.Date;
 import java.util.List;
 
@@ -11,15 +15,11 @@ import java.util.List;
 @Entity
 @Data
 @Table(name = "orders")
-public class Order {
+@EntityListeners(AuditingEntityListener.class)
+public class Order extends Auditable<String> implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
-    @Column(nullable = false, updatable = false)
-    @CreationTimestamp
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MM/dd/yyyy")
-    private Date created;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "order_states_id")

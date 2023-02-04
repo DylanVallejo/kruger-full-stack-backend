@@ -1,6 +1,8 @@
 package com.kruger.paymentmicroservice.service;
 
+import com.kruger.paymentmicroservice.client.OrderClient;
 import com.kruger.paymentmicroservice.entity.Payment;
+import com.kruger.paymentmicroservice.model.Order;
 import com.kruger.paymentmicroservice.repository.PaymentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -12,6 +14,9 @@ public class PaymentServiceImpl implements PaymentService {
 
     @Autowired
     private PaymentRepository paymentRepository;
+
+    @Autowired
+    private OrderClient orderClient;
     @Override
     public List<Payment> findAll() {
         return paymentRepository.findAll();
@@ -19,7 +24,9 @@ public class PaymentServiceImpl implements PaymentService {
 
     @Override
     public Payment save(Payment payment) {
-        return  paymentRepository.save(payment);
+        Order order= orderClient.getById(payment.getOrderId()).getBody().get();
+        payment.setOrderId(payment.getOrderId());
+        return paymentRepository.save(payment);
     }
 
     @Override
@@ -29,6 +36,11 @@ public class PaymentServiceImpl implements PaymentService {
 
     @Override
     public Optional<Payment> findPaymentByid(Long id) {
+        return paymentRepository.findById(id);
+    }
+
+    @Override
+    public Optional<Payment> findByid(Long id) {
         return paymentRepository.findById(id);
     }
 

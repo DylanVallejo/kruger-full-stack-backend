@@ -1,14 +1,18 @@
 package com.kruger.ordermicroservice.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.kruger.ordermicroservice.audit.Auditable;
+import jakarta.persistence.*;
 import lombok.Data;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+import java.io.Serializable;
 
 @Entity
 @Data
-public class Invoice {
+@EntityListeners(AuditingEntityListener.class)
+public class Invoice  extends Auditable<String> implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
