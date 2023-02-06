@@ -47,7 +47,7 @@ public class CompanyController {
         company1.setPhone(company.getPhone());
         company1.setCell_phone(company.getCell_phone());
         company1.setEmail(company.getEmail());
-        company1.setMission(company1.getMission());
+        company1.setMission(company.getMission());
         company1.setVision(company.getVision());
         Company companytNew = companyService.save(company1);
         return ResponseEntity.ok(companytNew);
