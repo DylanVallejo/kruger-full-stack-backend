@@ -2,11 +2,14 @@ package com.kruger.ordermicroservice.entities;
 
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.kruger.ordermicroservice.audit.Auditable;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Set;
 
@@ -15,7 +18,8 @@ import java.util.Set;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class OrderState {
+@EntityListeners(AuditingEntityListener.class)
+public class OrderState extends Auditable<String> implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

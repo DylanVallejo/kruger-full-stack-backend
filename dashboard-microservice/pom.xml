@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.kruger</groupId>
-	<artifactId>payment-microservice</artifactId>
+	<artifactId>dashboard-microservice</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>payment-microservice</name>
-	<description>Payment microservices</description>
+	<name>dashboard-microservice</name>
+	<description>dashboard-microservice</description>
 	<properties>
 		<java.version>17</java.version>
 		<spring-cloud.version>2022.0.1</spring-cloud.version>
@@ -54,17 +54,11 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-bootstrap</artifactId>
 		</dependency>
-
-		<!--agregando feign client para ordenes -->
-		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-openfeign</artifactId>
-		</dependency>
-
 	</dependencies>
 	<dependencyManagement>
 		<dependencies>
@@ -104,4 +98,5 @@
 			</snapshots>
 		</repository>
 	</repositories>
+
 </project>

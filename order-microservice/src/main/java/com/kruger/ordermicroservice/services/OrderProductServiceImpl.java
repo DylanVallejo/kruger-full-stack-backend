@@ -39,6 +39,7 @@ public class OrderProductServiceImpl implements OrderProductService{
 
     @Override
     public void delete(Long id) {
+        orderProductRepository.deleteById(id);
 
     }
 

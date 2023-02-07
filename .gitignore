@@ -77,3 +77,7 @@ payment-microservice/.project
 payment-microservice/.settings
 payment-microservice/.springBeans
 payment-microservice/.sts4-cache
+dashboard-microservice/.mvn/wrapper/maven-wrapper.jar
+dashboard-microservice/.mvn/wrapper/maven-wrapper.properties
+dashboard-microservice/mvnw
+dashboard-microservice/mvnw.cmd
