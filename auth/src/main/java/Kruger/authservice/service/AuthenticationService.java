@@ -12,6 +12,9 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @Service
 @RequiredArgsConstructor
 public class AuthenticationService {
@@ -29,8 +32,8 @@ public class AuthenticationService {
             .status(true)
             .password(passwordEncoder.encode(request.getPassword()))
             .role(request.getRole() == null ? Role.USER : Role.ADMIN)
-
             .build();
+            System.out.println(user.toString());
     repository.save(user);
     return user;
 
@@ -44,9 +47,12 @@ public class AuthenticationService {
     );
     var user = repository.findByEmail(request.getEmail())
             .orElseThrow();
+//    String role = user.getRole() == Role.USER ? "USER" : "ADMIN"; recuerdo del jonathan que escribe mal :v
+    String role = user.getRole().toString();
     var jwtToken = jwtService.generateToken(user);
     return AuthenticationResponse.builder()
             .token(jwtToken)
+            .role(role)
             .build();
   }
   public AuthenticationResponse validate(String token, User user) {
