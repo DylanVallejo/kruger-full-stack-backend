@@ -2,8 +2,10 @@ package com.kruger.ordermicroservice.services;
 
 import com.kruger.ordermicroservice.entities.Associate;
 import com.kruger.ordermicroservice.entities.Order;
+import com.kruger.ordermicroservice.entities.OrderProduct;
 import com.kruger.ordermicroservice.entities.OrderState;
 import com.kruger.ordermicroservice.repositories.AssociateRepository;
+import com.kruger.ordermicroservice.repositories.OrderProductRepository;
 import com.kruger.ordermicroservice.repositories.OrderRepository;
 import com.kruger.ordermicroservice.repositories.OrderStateRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +28,9 @@ public class OrderImpl  implements  OrderService{
     @Autowired
     private AssociateRepository associateRepository;
 
+    @Autowired
+    private OrderProductRepository orderProductRepository;
+
 
 
     @Override
@@ -40,11 +45,34 @@ public class OrderImpl  implements  OrderService{
 
     @Override
     public Order save(Order order) {
-        OrderState orderState = orderStateRepository.findById(order.getOrderState().getId()).get();
-        Associate associate = associateRepository.findById(order.getAssociate().getId()).get();
+
+//        jonathan
+        List< OrderProduct > detalles = order.getItems();
+        order.setItems(null);
+//        jonathan
+        System.out.println( detalles.isEmpty());
+
+
+         OrderState  orderState = orderStateRepository.findById(order.getOrderState().getId()).get();
+         Associate associate = associateRepository.findById(order.getAssociate().getId()).get();
         order.setAssociate(associate);
         order.setOrderState(orderState);
-        return orderRepository.save(order);
+//        return orderRepository.save(order);
+
+//        jona
+        orderRepository.save(order);
+
+        for (OrderProduct detalle:detalles) {
+
+            detalle.setOrder(order);
+            detalle.setSubtotal(detalle.getQuantity()*detalle.getPrice());
+        }
+        orderProductRepository.saveAll(detalles);
+        order.setItems(detalles);
+        return order;
+
+//        jonathan
+
     }
 
     @Override

@@ -5,10 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8916b79-b9c8-4546-8257-6f722022e238" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/controllers/OrderProductController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/entities/Order.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/entities/Order.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/entities/OrderProduct.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/entities/OrderProduct.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/controllers/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/controllers/OrderController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/services/OrderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/services/OrderImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../products/src/main/java/kruger/products/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../products/src/main/java/kruger/products/controller/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../products/src/main/java/kruger/products/entity/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../products/src/main/java/kruger/products/entity/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../products/src/main/java/kruger/products/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../products/src/main/java/kruger/products/entity/Product.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../products/src/main/java/kruger/products/model/CommetRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../products/src/main/java/kruger/products/model/CommetRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../products/src/main/java/kruger/products/service/CommetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../products/src/main/java/kruger/products/service/CommetService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../products/src/main/java/kruger/products/service/CommetServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../products/src/main/java/kruger/products/service/CommetServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../products/target/classes/kruger/products/ProductsApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../products/target/classes/kruger/products/ProductsApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../products/target/classes/kruger/products/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../products/target/classes/kruger/products/controller/ProductController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../products/target/classes/kruger/products/entity/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/../products/target/classes/kruger/products/entity/Product.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,13 +34,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/dylan/Escritorio/edwin bugs/kruger-full-stack-backend/eureka-microservice"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/dylan/Escritorio/edwin bugs/kruger-full-stack-backend/eureka-microservice&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="ConfigMicroserviceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.fastfood.configmicroservice.ConfigMicroserviceApplication" />

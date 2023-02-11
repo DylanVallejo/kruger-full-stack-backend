@@ -10,4 +10,7 @@ public interface CommetService {
     Comment save(Comment comment);
     public void delete(Long id);
     public Optional<Comment> findReviewByid(Long id);
+
+    public List<Comment> findByProductId(Integer id);
+
 }

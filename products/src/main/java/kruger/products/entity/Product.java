@@ -54,6 +54,8 @@ public class Product extends Auditable<String> implements Serializable{
     private  Long discount;
     
     private Long stock;
+
+    private Integer quantity;
     
 
     @ManyToOne(fetch = FetchType.LAZY)

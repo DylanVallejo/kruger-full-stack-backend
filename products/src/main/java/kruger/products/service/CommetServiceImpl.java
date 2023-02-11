@@ -33,4 +33,10 @@ public class CommetServiceImpl implements CommetService{
     public Optional<Comment> findReviewByid(Long id) {
         return commetRepository.findById(id);
     }
+
+    @Override
+    public List<Comment> findByProductId(Integer id) {
+        return commetRepository.findByProductId(id);
+    }
+
 }
