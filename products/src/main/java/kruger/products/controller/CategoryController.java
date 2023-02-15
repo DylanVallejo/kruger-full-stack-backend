@@ -1,5 +1,6 @@
 package kruger.products.controller;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import kruger.products.entity.Category;
 import kruger.products.entity.Comment;
 import kruger.products.entity.Product;
@@ -17,6 +18,7 @@ import java.util.Optional;
 @RequestMapping("api/category")
 @CrossOrigin(origins = "*", allowedHeaders = "*", methods= {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})
 //@CrossOrigin(origins = "*", maxAge = 3600)
+@Tag(name = "Category Controller", description = "Crud operations for Category.")
 public class CategoryController {
 
 
