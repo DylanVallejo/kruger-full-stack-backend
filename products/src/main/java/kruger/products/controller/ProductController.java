@@ -1,5 +1,6 @@
 package kruger.products.controller;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import kruger.products.entity.Category;
 import kruger.products.entity.Product;
 import kruger.products.service.CategoryService;
@@ -15,8 +16,9 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("api/product")
+@Tag(name = "Product Controller", description = "Crud operations for product.")
 @CrossOrigin(origins = "*", allowedHeaders = "*", methods= {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})
-//@CrossOrigin(origins = "*")
+
 public class ProductController {
 
     @Autowired
@@ -64,7 +66,7 @@ public class ProductController {
         return ResponseEntity.ok(productNew);
     }
 
-    @RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE, produces = "application/json")
+    @DeleteMapping("/delete/{id}" )
     public void delete(@PathVariable Long id) {
         productService.delete(id);
     }

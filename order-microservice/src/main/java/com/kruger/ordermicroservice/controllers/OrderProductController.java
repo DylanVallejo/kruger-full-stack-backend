@@ -8,6 +8,7 @@ import com.kruger.ordermicroservice.repositories.OrderProductRepository;
 import com.kruger.ordermicroservice.repositories.OrderRepository;
 import com.kruger.ordermicroservice.services.OrderProductServiceImpl;
 import com.kruger.ordermicroservice.services.OrderService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +16,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
-
+@Tag(name = "Order Product Controller", description = "Crud operations for Order Product.")
 @RestController
 @RequestMapping("/api/orderproduct")
 @CrossOrigin(origins = "*", allowedHeaders = "*", methods= {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})
