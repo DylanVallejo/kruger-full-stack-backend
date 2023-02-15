@@ -2,6 +2,7 @@ package kruger.products.service;
 
 import kruger.products.entity.Product;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -11,4 +12,6 @@ public interface ProductService {
     public void delete(Long id);
 
     public Optional<Product> findProductoByid(Long id);
+
+    public List<Product> findProductCroselling(Product product);
 }

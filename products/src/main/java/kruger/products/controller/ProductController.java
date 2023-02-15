@@ -46,6 +46,12 @@ public class ProductController {
         Product productNew = productService.save(product);
         return ResponseEntity.ok(productNew);
     }
+
+    @GetMapping("/cross")
+    public ResponseEntity<List<Product>> findCroselling(@RequestBody Product product){
+        List<Product> croselling= productService.findProductCroselling(product);
+        return ResponseEntity.ok(croselling);
+    }
     @PutMapping("/update/{id}")
     public ResponseEntity<Product> update(@RequestBody Product product,@PathVariable("id") Long id ){
         Optional< Category> category= categoryService.findCategoryByid(product.getCategory().getId());
