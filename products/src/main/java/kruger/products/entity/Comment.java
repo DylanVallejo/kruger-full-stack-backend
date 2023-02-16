@@ -1,5 +1,6 @@
 package kruger.products.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import kruger.products.Audit.Auditable;
 import lombok.AllArgsConstructor;
@@ -29,7 +30,8 @@ public class Comment extends Auditable<String> implements Serializable{
 	    @Column(name = "text", nullable = false,length = 250)
 	    private String text;
 
-	@ManyToOne(fetch = FetchType.EAGER)
+	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "product_id")
+	@JsonIgnore
 	private Product product;
 }

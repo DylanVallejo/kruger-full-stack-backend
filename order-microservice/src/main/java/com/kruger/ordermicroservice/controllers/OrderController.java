@@ -36,6 +36,9 @@ public class OrderController {
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
     public Order save(@RequestBody Order order){
+//        jonatan
+            System.out.println(order.getItems().isEmpty());
+//        j
         return orderService.save(order);
     }
 

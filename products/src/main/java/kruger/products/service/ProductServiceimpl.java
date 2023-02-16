@@ -32,4 +32,12 @@ public class ProductServiceimpl implements ProductService{
     public Optional<Product> findProductoByid(Long id) {
         return  productRepository.findById(id);
     }
+
+    @Override
+    public void UpdateStock(Long stock, Long id) {
+        Product productStock = productRepository.findById(id).get();
+        productStock.setStock(stock);
+        productRepository.save(productStock);
+    }
+
 }

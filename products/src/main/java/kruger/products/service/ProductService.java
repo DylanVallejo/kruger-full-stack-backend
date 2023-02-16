@@ -11,4 +11,6 @@ public interface ProductService {
     public void delete(Long id);
 
     public Optional<Product> findProductoByid(Long id);
+
+    void UpdateStock(Long stock,Long id);
 }

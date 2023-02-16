@@ -6,6 +6,7 @@ import kruger.products.entity.Product;
 import kruger.products.service.CategoryService;
 import kruger.products.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -65,6 +66,15 @@ public class ProductController {
         Product productNew = productService.save(product1);
         return ResponseEntity.ok(productNew);
     }
+
+
+    @PutMapping("/update/product/{productId}/stock/{cantidad}")
+    public ResponseEntity<?> update(@PathVariable("productId") Long productId,@PathVariable("cantidad") Long cantidad ){
+        productService.UpdateStock(cantidad  , productId);
+        return ResponseEntity.status(HttpStatus.OK).body("Stock actualizado");
+    }
+
+
 
     @DeleteMapping("/delete/{id}" )
     public void delete(@PathVariable Long id) {

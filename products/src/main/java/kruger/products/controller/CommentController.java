@@ -7,12 +7,11 @@ import kruger.products.entity.Product;
 import kruger.products.service.CommetService;
 import kruger.products.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Date;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 @RestController
 @CrossOrigin(origins = "*", allowedHeaders = "*", methods= {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})
@@ -35,6 +34,17 @@ public class CommentController {
         return ResponseEntity.ok(reviews);
     }
 
+    @GetMapping( "/product/{id}" )
+    public ResponseEntity<?> findByProductId(@PathVariable("id") Integer id){
+        List<Comment> reviews = commetService.findByProductId(id);
+//        Map<String, String> mensaje = new HashMap<>();
+        if(reviews.isEmpty())
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Aun no exsiten comentarios");
+        return ResponseEntity.ok(reviews);
+    }
+
+
+
     @GetMapping("/{id}")
     public ResponseEntity<Optional<Comment>> getById(@PathVariable("id") Long id){
         Optional<Comment> review = commetService.findReviewByid(id);
@@ -43,13 +53,25 @@ public class CommentController {
         return ResponseEntity.ok(review);
     }
 
-    @PostMapping()
-    public ResponseEntity<Comment> save(@RequestBody Comment comment){
-        Optional<Product> product= productService.findProductoByid(comment.getProduct().getId());
-        comment.setProduct(product.get());
-        Comment reviewNew = commetService.save(comment);
-        return ResponseEntity.ok(reviewNew);
-    }
+//    @PostMapping()
+//    public ResponseEntity<Comment> save(@RequestBody Comment comment){
+//        Optional<Product> product= productService.findProductoByid(comment.getProduct().getId());
+//        comment.setProduct(product.get());
+//        Comment reviewNew = commetService.save(comment);
+//        return ResponseEntity.ok(reviewNew);
+//    }
+
+        @PostMapping("/product/{id}")
+        public ResponseEntity<?> save(@RequestBody Comment comment , @PathVariable("id") Long id ){
+            Optional<Product> product= productService.findProductoByid(id);
+
+            comment.setProduct(product.get());
+            Comment reviewNew = commetService.save(comment);
+
+            return ResponseEntity.ok(reviewNew);
+        }
+
+
 
 
     @PutMapping("/update/{id}")
