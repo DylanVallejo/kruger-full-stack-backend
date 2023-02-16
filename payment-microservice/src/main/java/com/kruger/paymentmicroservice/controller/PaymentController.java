@@ -2,6 +2,7 @@ package com.kruger.paymentmicroservice.controller;
 
 import com.kruger.paymentmicroservice.entity.Payment;
 import com.kruger.paymentmicroservice.service.PaymentService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -13,6 +14,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api/payment")
 @CrossOrigin(origins = "*", allowedHeaders = "*", methods= {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})
+@Tag(name = "Payment Controller", description = "Crud operations for payment.")
 public class PaymentController {
 
     @Autowired
