@@ -48,6 +48,7 @@ public class AuthenticationService {
     var user = repository.findByEmail(request.getEmail())
             .orElseThrow();
 //    String role = user.getRole() == Role.USER ? "USER" : "ADMIN"; recuerdo del jonathan que escribe mal :v
+//    String role = user.getRole().toString();
     String role = user.getRole().toString();
     var jwtToken = jwtService.generateToken(user);
     return AuthenticationResponse.builder()

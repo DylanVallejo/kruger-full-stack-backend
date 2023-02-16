@@ -5,18 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8916b79-b9c8-4546-8257-6f722022e238" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../auth/src/main/java/Kruger/authservice/service/AuthenticationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../auth/src/main/java/Kruger/authservice/service/AuthenticationService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/controllers/OrderController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/controllers/OrderController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/services/OrderImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../order-microservice/src/main/java/com/kruger/ordermicroservice/services/OrderImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../products/src/main/java/kruger/products/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../products/src/main/java/kruger/products/controller/CommentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../products/src/main/java/kruger/products/entity/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/../products/src/main/java/kruger/products/entity/Comment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../products/src/main/java/kruger/products/entity/Product.java" beforeDir="false" afterPath="$PROJECT_DIR$/../products/src/main/java/kruger/products/entity/Product.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../products/src/main/java/kruger/products/model/CommetRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../products/src/main/java/kruger/products/model/CommetRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../products/src/main/java/kruger/products/service/CommetService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../products/src/main/java/kruger/products/service/CommetService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../products/src/main/java/kruger/products/service/CommetServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../products/src/main/java/kruger/products/service/CommetServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../products/target/classes/kruger/products/ProductsApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/../products/target/classes/kruger/products/ProductsApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/bootstrap.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/bootstrap.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../payment-microservice/src/main/java/com/kruger/paymentmicroservice/service/PaymentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../payment-microservice/src/main/java/com/kruger/paymentmicroservice/service/PaymentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../products/src/main/java/kruger/products/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../products/src/main/java/kruger/products/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../products/src/main/java/kruger/products/service/ProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../products/src/main/java/kruger/products/service/ProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../products/src/main/java/kruger/products/service/ProductServiceimpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../products/src/main/java/kruger/products/service/ProductServiceimpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../products/target/classes/kruger/products/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../products/target/classes/kruger/products/controller/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../products/target/classes/kruger/products/entity/Product.class" beforeDir="false" afterPath="$PROJECT_DIR$/../products/target/classes/kruger/products/entity/Product.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../products/target/classes/kruger/products/service/ProductService.class" beforeDir="false" afterPath="$PROJECT_DIR$/../products/target/classes/kruger/products/service/ProductService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../products/target/classes/kruger/products/service/ProductServiceimpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../products/target/classes/kruger/products/service/ProductServiceimpl.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
