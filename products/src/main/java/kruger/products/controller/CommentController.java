@@ -1,6 +1,7 @@
 package kruger.products.controller;
 
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import kruger.products.entity.Comment;
 import kruger.products.entity.Product;
 import kruger.products.service.CommetService;
@@ -15,6 +16,7 @@ import java.util.*;
 @RestController
 @CrossOrigin(origins = "*", allowedHeaders = "*", methods= {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})
 @RequestMapping("api/comment")
+@Tag(name = "Comment Controller", description = "Crud operations for Comment.")
 //@CrossOrigin(origins = "*", maxAge = 3600)
 public class CommentController {
 

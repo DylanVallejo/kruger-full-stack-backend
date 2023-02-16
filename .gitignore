@@ -81,3 +81,27 @@ dashboard-microservice/.mvn/wrapper/maven-wrapper.jar
 dashboard-microservice/.mvn/wrapper/maven-wrapper.properties
 dashboard-microservice/mvnw
 dashboard-microservice/mvnw.cmd
+
+
+products/HELP.md
+products/target/
+products/mvnw
+products/mvnw.cmd
+products/.mvn/
+### IntelliJ IDEA ###
+products/.idea
+products/*.iws
+products/*.iml
+products/*.ipr
+
+### STS ###
+products/.apt_generated
+products/.classpath
+products/.factorypath
+products/.project
+products/.settings
+products/.springBeans
+products/.sts4-cache
+
+
+products/target/classes/

@@ -3,6 +3,7 @@ package com.kruger.ordermicroservice.controllers;
 
 import com.kruger.ordermicroservice.entities.OrderState;
 import com.kruger.ordermicroservice.services.OrderStateService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -10,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Optional;
-
+@Tag(name = "State Order Controller", description = "Crud operations for Order State.")
 @RestController
 @RequestMapping("api/state")
 @CrossOrigin(origins = "*", allowedHeaders = "*", methods= {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})
