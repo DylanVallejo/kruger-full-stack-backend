@@ -6,7 +6,7 @@ spring:
     config:
       server:
         git:
-          default-label: cambiosApiDylan
+          default-label: microsFuncionales
           uri: https://github.com/DylanVallejo/kruger-full-stack-backend
           searchPaths: config-data
         bootstrap: true

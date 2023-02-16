@@ -2,8 +2,10 @@ package com.kruger.ordermicroservice.controllers;
 
 
 import com.kruger.ordermicroservice.entities.Order;
+import com.kruger.ordermicroservice.entities.OrderState;
 import com.kruger.ordermicroservice.models.Product;
 import com.kruger.ordermicroservice.services.OrderService;
+import com.kruger.ordermicroservice.services.OrderStateService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.ArraySchema;
 import io.swagger.v3.oas.annotations.media.Content;
@@ -25,6 +27,9 @@ import java.util.Optional;
 public class OrderController {
     @Autowired
     private OrderService orderService;
+
+    @Autowired
+    private OrderStateService orderStateService;
 
     @Tag(name = "Order find all.")
     @Operation(summary = "Retrieves orders", description = "Provides a list of all orders.")
@@ -49,6 +54,27 @@ public class OrderController {
         if(order==null)
             return ResponseEntity.notFound().build();
         return ResponseEntity.ok(order);
+    }
+
+
+    @PutMapping("/order-state/{id}")
+    public ResponseEntity<Order> update(@RequestBody Order order, @PathVariable("id") Long id ){
+//        service.findById(order.getOrderState().getId()).get();
+        OrderState orderState = orderStateService.findById(order.getOrderState().getId()).get();
+        Order order1 = orderService.findById(id).get();
+        order1.setOrderState(orderState);
+
+//        Optional< Category> category= categoryService.findCategoryByid(product.getCategory().getId());
+//        Product product1= productService.findProductoByid(id).get();
+//        product1.setCategory(category.get());
+//        product1.setProductName(product.getProductName());
+//        product1.setDescription(product.getDescription());
+//        product1.setPrice(product.getPrice());
+//        product1.setStock(product.getStock());
+//        product1.setItsInOffers(product.getItsInOffers());
+//        product1.setLastModifiedDate(new Date());
+        Order orderNew = orderService.save(order1);
+        return ResponseEntity.ok(orderNew);
     }
 
 //    crear una orden
