@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: products
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:8080
+#web:
+#  cors:
+#    allowed-origins: "http://localhost:8082"
+#    allowed-methods: GET, POST, PATCH, PUT, DELETE, OPTIONS, HEAD
+#    max-age: 3600
+#    allowed-headers: "Requestor-Type"
+#    exposed-headers: "X-Get-Header"

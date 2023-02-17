@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: gateway-microservice
+  cloud:
+    config:
+      uri: http://localhost:8080
+    gateway:
+      default-filters:
+        - DedupeResponseHeader=Access-Control-Allow-Origin Access-Control-Allow-Credentials, RETAIN_UNIQUE
+      global cors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedHeaders: "*"
+            allowedMethods: "*"

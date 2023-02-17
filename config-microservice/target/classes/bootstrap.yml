@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+spring:
+  cloud:
+    config:
+      server:
+        git:
+          default-label: microsFuncionales
+          uri: https://github.com/DylanVallejo/kruger-full-stack-backend
+          searchPaths: config-data
+        bootstrap: true
+
+
+  application:
+    name: config-microservice

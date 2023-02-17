@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: order-microservice
+  cloud:
+    config:
+      enabled: true
+      uri: http://localhost:8080
